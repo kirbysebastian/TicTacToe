@@ -9,4 +9,8 @@ def test_ttt_is_game_over():
     assert game.is_game_over() == False
 
 def test_ttt_is_player_winner():
-    pass
+    p1 = Player('X')
+    p2 = Player('O')
+    game = TicTacToe(p1, p2)
+    assert game.is_player_winner(p1) == False
+    assert game.is_player_winner(p2) == False
