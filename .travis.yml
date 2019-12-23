@@ -1,10 +1,9 @@
 language: python
+python:
+  - "3.7"
 
-script: python *.py
-
-jobs:
-  include:
-    script: pytest
+script:
+  - pytest
 
 notifications:
   email: kirbypaolo.sebastian@gmail.com
