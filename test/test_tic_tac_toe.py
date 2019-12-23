@@ -13,4 +13,4 @@ def test_ttt_is_player_winner():
     p2 = Player('O')
     game = TicTacToe(p1, p2)
     assert game.is_player_winner(p1) == False
-    assert game.is_player_winner(p2) == False
+    assert game.is_player_winner(p2) == True
