@@ -1,24 +1,23 @@
 import pytest
-import Board
-
+from Board import Board
 
 def test_board_place_with_integer_pos():
-    board = Board.Board()
+    board = Board()
     out = board.place('*', 4)
     assert out == False 
 
 def test_board_place_with_invalid_pos():
-    board = Board.Board()
+    board = Board()
     out = board.place('*', '0')
     assert out == False
 
 def test_board_place():
-    board = Board.Board()
+    board = Board()
     out = board.place('*', '5')
     assert out == True
 
 def test_board_is_full():
-    board = Board.Board()
+    board = Board()
     board.place('*', '1')
     board.place('*', '2')
     board.place('*', '3')
@@ -31,7 +30,7 @@ def test_board_is_full():
     assert board.is_full() == True
 
 def test_board_is_not_full():
-    board = Board.Board()
+    board = Board()
     board.place('*', '1')
     board.place('*', '2')
     board.place('*', '3')
@@ -43,15 +42,15 @@ def test_board_is_not_full():
     assert board.is_full() == False
     
 def test_board_place_correct_position():
-    first_board = Board.Board()
-    second_board = Board.Board()
+    first_board = Board()
+    second_board = Board()
     first_board.place('*', '5')
     second_board.place('*', '5')
     assert str(first_board) == str(second_board)
 
 def test_board_place_incorrect_position():
-    first_board = Board.Board()
-    second_board = Board.Board()
+    first_board = Board()
+    second_board = Board()
     first_board.place('*', '3')
     second_board.place('*', '2')
     assert str(first_board) != str(second_board)

@@ -17,7 +17,10 @@ class Board:
     def __str__(self):
         self.make_printable_board() 
         return self.__print_board
-    
+   
+    def get_board(self):
+        return self.__board
+
     def make_printable_board(self):
         c_gap = '  ----------- '
         r_gap = ' | '
