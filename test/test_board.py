@@ -55,3 +55,11 @@ def test_board_place_incorrect_position():
     second_board.place('*', '2')
     assert str(first_board) != str(second_board)
 
+def test_board_is_space_available():
+    board = Board()
+    assert board.is_full() == False
+    for num in range(1, 10):
+        assert board.is_space_available(str(num)) == True
+        board.place('*', str(num))
+        assert board.is_space_available(str(num)) == False
+    assert board.is_full() == True

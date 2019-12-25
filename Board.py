@@ -12,16 +12,16 @@ class Board:
             ['1', '2', '3'],
             ['4', '5', '6'],
             ['7', '8', '9']]
-        self.make_printable_board()
+        self.make_printable()
    
     def __str__(self):
-        self.make_printable_board() 
+        self.make_printable() 
         return self.__print_board
    
     def get_board(self):
         return self.__board
 
-    def make_printable_board(self):
+    def make_printable(self):
         c_gap = '  ----------- '
         r_gap = ' | '
         
@@ -32,6 +32,20 @@ class Board:
                 self.__print_board += d
                 self.__print_board += r_gap
             self.__print_board += '\n' + c_gap + '\n'
+
+    def is_space_available(self, pos: str):
+        row1 = self.__board[0]
+        row2 = self.__board[1]
+        row3 = self.__board[2]
+
+        if not pos.isdigit():
+            return False
+
+        r1 = range(1,4).count(int(pos)) and row1[int(pos)-1] == str(pos)
+        r2 = range(4,7).count(int(pos)) and row2[int(pos)-4] == str(pos)
+        r3 = range(7,10).count(int(pos)) and row3[int(pos)-7] == str(pos)
+
+        return r1 or r2 or r3
 
     def is_full(self):
         board = self.__board
