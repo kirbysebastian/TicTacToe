@@ -14,7 +14,7 @@ class TicTacToe:
         p2 = self.player_two
         board = self.board
         
-        os.system('cls')
+        os.system('clear')
         print(board)
         while not self.game_over:
             #Player Turn
@@ -33,7 +33,7 @@ class TicTacToe:
                 p2.make_turn(False)
                 p1.make_turn(True)
 
-            os.system('cls')
+            os.system('clear')
             print(board)
 
             #Check Winner
