@@ -10,3 +10,4 @@ TicTacToe Game made with Python language.
 ## TODO LIST
 - Fix bug when players have the same character
 - Add text/labels for player turn to identify current player's turn
+- Rename modules with lowercase and fix imports
