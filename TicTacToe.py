@@ -1,6 +1,13 @@
 import os
 from Board import Board
 
+def clear():
+    import sys
+    if sys.platform == 'win32':
+        os.system('cls')
+    elif sys.platform == 'linux':
+        os.system('clear')
+
 class TicTacToe:
     def __init__(self, player1, player2):
        self.game_over = False
@@ -14,7 +21,7 @@ class TicTacToe:
         p2 = self.player_two
         board = self.board
         
-        os.system('clear')
+        clear()
         print(board)
         while not self.game_over:
             #Player Turn
@@ -33,7 +40,7 @@ class TicTacToe:
                 p2.make_turn(False)
                 p1.make_turn(True)
 
-            os.system('clear')
+            clear()
             print(board)
 
             #Check Winner
