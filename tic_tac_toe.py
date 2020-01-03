@@ -1,5 +1,5 @@
 import os
-from Board import Board
+from board import Board
 
 def clear():
     import sys

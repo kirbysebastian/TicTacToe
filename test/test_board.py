@@ -1,5 +1,6 @@
 import pytest
-from Board import Board
+
+from board import Board
 
 def test_board_place_with_integer_pos():
     board = Board()
