@@ -1,5 +1,5 @@
 import pytest
-from TicTacToe import TicTacToe
+from tic_tac_toe import TicTacToe
 from Player import Player
 
 def test_ttt_is_game_over():

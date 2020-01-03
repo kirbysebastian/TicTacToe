@@ -1,5 +1,5 @@
 from Player import Player
-from TicTacToe import TicTacToe
+from tic_tac_toe import TicTacToe
 
 def generate_players():
     p1_char = input('Enter Player 1 Character: ')
