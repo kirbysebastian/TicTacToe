@@ -1,5 +1,6 @@
 from player import Player
 from tic_tac_toe import TicTacToe
+from utils.clear import clear
 
 def generate_players():
     p1_char = input('Enter Player 1 Character: ')
@@ -17,6 +18,7 @@ def generate_players():
     return player1, player2
 
 def main():
+    clear()
     p1, p2 = generate_players()
     game = TicTacToe(p1, p2)
     game.start()

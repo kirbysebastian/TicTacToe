@@ -1,12 +1,5 @@
-import os
 from board import Board
-
-def clear():
-    import sys
-    if sys.platform == 'win32':
-        os.system('cls')
-    elif sys.platform == 'linux':
-        os.system('clear')
+from utils.clear import clear
 
 class TicTacToe:
     def __init__(self, player1, player2):
@@ -36,16 +29,18 @@ class TicTacToe:
                 p2.make_turn(False)
                 p1.make_turn(True)
 
-            #Check Winner
-            if self.is_player_winner(p1):
-                self.announce_winner(p1)
-                self.game_over = True
-            elif self.is_player_winner(p2):
-                self.announce_winner(p2)
-                self.game_over = True
-            elif board.is_full():
-                self.announce_tie()
-                self.game_over = True
+            self.check_winner()
+
+    def check_winner(self):
+        if self.is_player_winner(self.player_one):
+             self.announce_winner(self.player_one)
+             self.game_over = True
+        elif self.is_player_winner(self.player_two):
+             self.announce_winner(self.player_two)
+             self.game_over = True
+        elif self.board.is_full():
+             self.announce_tie()
+             self.game_over = True
 
     def get_turn_position(self, msg: str):
         while True:
@@ -85,6 +80,8 @@ class TicTacToe:
         return diag_check or ver_check or horz_check 
 
     def announce_winner(self, player):
+        clear()
+        print(self.board)
         print('\nWinner is, player {}!'.format(str(player)))
 
     def announce_tie(self):
