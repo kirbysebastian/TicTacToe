@@ -8,6 +8,5 @@ TicTacToe Game made with Python language.
 4. When all 9 squares are full, with players having no straight line on the grid, ends the game and results in a tie.
 
 ## TODO LIST
-- Fix bug when players have the same character
 - Add text/labels for player turn to identify current player's turn
 
