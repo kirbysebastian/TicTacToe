@@ -1,4 +1,4 @@
-from Player import Player
+from player import Player
 from tic_tac_toe import TicTacToe
 
 def generate_players():

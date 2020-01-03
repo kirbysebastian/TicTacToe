@@ -1,5 +1,6 @@
 import pytest
-from Player import Player
+
+from player import Player
 
 def test_player_character():
     player1 = Player('*')

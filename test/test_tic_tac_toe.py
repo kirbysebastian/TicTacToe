@@ -1,6 +1,7 @@
 import pytest
+
 from tic_tac_toe import TicTacToe
-from Player import Player
+from player import Player
 
 def test_ttt_is_game_over():
     p1 = Player('O')
