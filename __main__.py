@@ -17,8 +17,12 @@ def generate_players():
     player2 = Player(p2_char)
     return player1, player2
 
+def greetings():
+    print('WELCOME TO MY VERY OWN PYTHON-TICTACTOE GAME!\n')
+
 def main():
     clear()
+    greetings()
     p1, p2 = generate_players()
     game = TicTacToe(p1, p2)
     game.start()
