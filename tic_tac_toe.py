@@ -47,7 +47,6 @@ class TicTacToe:
             pos = input(msg)
             if not self.board.is_space_available(pos):
                 print('Position {} not available.'.format(pos))
-                print('Press any key to continue...')
                 continue
             break
         return pos
@@ -85,5 +84,7 @@ class TicTacToe:
         print('\nWinner is, player {}!'.format(str(player)))
 
     def announce_tie(self):
+        clear()
+        print(self.board)
         print("\nIt's a tie!")
 
