@@ -8,5 +8,4 @@ TicTacToe Game made with Python language where players get to choose their own m
 4. On the otherhand when all 9 squares in the grid are full, with players having no straight line on the grid, the game is over and results in a tie.
 
 ## TODO LIST
-- *add some todo lists here...* 
-
+- Game is done and playable. Do some improvements if necessary.
