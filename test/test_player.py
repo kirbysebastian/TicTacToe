@@ -1,6 +1,6 @@
 import pytest
 
-from player import Player
+from tic_tac_toe.player import Player
 
 def test_player_character():
     player1 = Player('*')

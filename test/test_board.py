@@ -1,6 +1,6 @@
 import pytest
 
-from board import Board
+from tic_tac_toe.board import Board
 
 def test_board_place_with_integer_pos():
     board = Board()
