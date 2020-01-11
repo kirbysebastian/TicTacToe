@@ -12,8 +12,6 @@ TicTacToe Game made with Python language.
 chmod +x play.py
 ./play
 ```
-
-
-## TODO LIST
+## TODOs
 - *add some todo lists here...* 
-
+- Make only 1 character input for players
