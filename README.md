@@ -20,7 +20,7 @@ python3 -m pytest
 ```
 
 ## Continuous Integration
-Runs a travis-ci: [Travis-CI](travis-ci.org/kirbysebastian/TicTacToe)
+Runs a travis-ci: [Travis-CI](https://travis-ci.org/kirbysebastian/TicTacToe)
 
 ## TODOs
 - *add some todo lists here...* 
