@@ -12,6 +12,17 @@ TicTacToe Game made with Python language.
 chmod +x play.py
 ./play
 ```
+
+## Test
+Runs with pytest
+```
+python3 -m pytest
+```
+
+## Continuous Integration
+Runs a travis-ci:
+travis-ci.org/kirbysebastian/TicTacToe
+
 ## TODOs
 - *add some todo lists here...* 
 - Make only 1 character input for players
