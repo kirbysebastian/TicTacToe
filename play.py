@@ -1,3 +1,5 @@
+#!/usr/bin/python3.7
+
 from player import Player
 from tic_tac_toe import TicTacToe
 from utils.clear import clear

@@ -7,6 +7,14 @@ TicTacToe Game made with Python language.
 3. The first player to get a straight line with their own marker, wins.
 4. When all 9 squares are full, with players having no straight line on the grid, ends the game and results in a tie.
 
+## Usage
+-----
+```
+chmod +x play.py
+./play
+```
+
+
 ## TODO LIST
 - *add some todo lists here...* 
 
