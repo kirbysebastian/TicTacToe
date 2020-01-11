@@ -1,5 +1,5 @@
 # TicTacToe
-TicTacToe Game made with Python language.
+TicTacToe Game made with Python3.
 
 ## Rules
 1. The game is played on a 3x3 grid with 2 players.
@@ -20,8 +20,7 @@ python3 -m pytest
 ```
 
 ## Continuous Integration
-Runs a travis-ci:
-travis-ci.org/kirbysebastian/TicTacToe
+Runs a travis-ci: [Travis-CI](travis-ci.org/kirbysebastian/TicTacToe)
 
 ## TODOs
 - *add some todo lists here...* 
