@@ -1,4 +1,4 @@
-from board import Board
+from tic_tac_toe.board import Board
 from utils.clear import clear
 
 class TicTacToe:
