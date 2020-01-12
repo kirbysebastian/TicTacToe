@@ -25,12 +25,12 @@ class TicTacToe:
 
         if p1.is_turn():
             msg = "Player-1's turn - {}: ".format(str(p1))
-            self.board.place(str(p1), self.get_turn_position(msg))
+            self.board.place(str(p1), p1.get_turn_position(self.board, msg))
             p1.make_turn(False)
             p2.make_turn(True)
         elif p2.is_turn():
             msg = "Player-2's turn - {}: ".format(str(p2))
-            self.board.place(str(p2), self.get_turn_position(msg))
+            self.board.place(str(p2), p2.get_turn_position(self.board, msg))
             p2.make_turn(False)
             p1.make_turn(True)
 
@@ -44,15 +44,6 @@ class TicTacToe:
         elif self.board.is_full():
              self.announce_tie()
              self.game_over = True
-
-    def get_turn_position(self, msg: str):
-        while True:
-            pos = input(msg)
-            if not self.board.is_space_available(pos):
-                print('Position {} not available.'.format(pos))
-                continue
-            break
-        return pos
 
     def is_game_over(self):
         return self.game_over

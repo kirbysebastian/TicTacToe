@@ -13,3 +13,12 @@ class Player:
     def make_turn(self, is_turn: bool):
         self.is_player_turn = is_turn
 
+    # Argument board for player's feedback of the current game status.
+    def get_turn_position(self, board, msg: str):
+        while True:
+            pos = input(msg)
+            if not board.is_space_available(pos):
+                print('Position {} not available.'.format(pos))
+                continue
+            break
+        return pos
