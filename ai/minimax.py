@@ -46,7 +46,7 @@ class Minimax():
         board = g_board.get_board()
 
         if depth == 0 or self.is_terminal(g_board):
-            return get_board_score(board)
+            return self.get_board_score(board)
 
         if isMaximizingPlayer is True:
             best_score = -math.inf
@@ -54,10 +54,10 @@ class Minimax():
                 for col in range(3):
                     if g_board.is_space_available(board[row][col]):
                         print("ano!", type(board))
-#                        pos = board[row][col] 
+                        pos = board[row][col] 
                         board[row][col] = self.char
-                        score = max(val, self.calculate(g_board, depth-1, False)
-#                        board[row][col] = pos
+                        score = max(best_score, self.calculate(g_board, depth-1, False))
+                        board[row][col] = pos
 
                         if score > best_score:
                             best_score = score
@@ -69,10 +69,10 @@ class Minimax():
                 for col in range(3):
                     if g_board.is_space_available(board[row][col]):
                         print("ano!", type(board))
-#                        pos = board[row][col] 
+                        pos = board[row][col] 
                         board[row][col] = self.x_char
-                        score = min(val, self.calculate(g_board, depth-1, True)
-#                        board[row][col] = pos
+                        score = min(best_score, self.calculate(g_board, depth-1, True))
+                        board[row][col] = pos
                         
                         if score > best_score:
                             best_score = score
