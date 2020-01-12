@@ -1,6 +1,5 @@
 # TicTacToe
 TicTacToe Game made with Python3.
----
 
 ## Rules
 1. The game is played on a 3x3 grid with 2 players.
