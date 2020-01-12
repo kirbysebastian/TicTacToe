@@ -1,7 +1,7 @@
 # TicTacToe
 ![](https://raw.githubusercontent.com/kirbysebastian/TicTacToe/master/tictactoe_game.png)
 
-A terminal TicTacToe Game made with Python3.
+A terminal TicTacToe game made with Python3.
 
 ## Rules
 1. The game is played on a 3x3 grid with 2 players.
@@ -43,10 +43,10 @@ python3 -m pytest
 Runs a travis-ci: [Travis-CI](https://travis-ci.org/kirbysebastian/TicTacToe)
 
 
-## AI
+## Artificial Intelligence Algorithm
 Still todo. Maybe use minimax algorithm (alpha beta pruning)
 ### Pseudocode
-Based on [Wiki](https://en.wikipedia.org/wiki/Minimax#Pseudocode)
+Based on [Minimax Algorithm](https://en.wikipedia.org/wiki/Minimax#Pseudocode)
 ```
 function minimax(node, depth, maximizingPlayer) is
     if depth = 0 or node is a terminal node then
