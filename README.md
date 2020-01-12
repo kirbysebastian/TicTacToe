@@ -8,9 +8,9 @@ TicTacToe Game made with Python3.
 4. When all 9 squares are full, with players having no straight line on the grid, ends the game and results in a tie.
 
 ## Modes
- 1 - Human to Human Game Mode
- 2 - Human to AI Game Mode
- 3 - AI to AI Game Mode
+ * (1) - Human to Human Game Mode
+ * (2) - Human to AI Game Mode
+ * (3) - AI to AI Game Mode
 
 ## Usage
 ### Setup
