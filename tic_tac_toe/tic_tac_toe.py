@@ -6,7 +6,6 @@ class TicTacToe:
        self.game_over = False
        self.player_one = player1
        self.player_two = player2
-       print(type(player2))
        self.board = Board()
 
     def start(self):
@@ -14,7 +13,7 @@ class TicTacToe:
         board = self.board
         
         while not self.game_over:
-            clear()
+#            clear()
             print(board)
 
             self.next_turn()
