@@ -47,6 +47,7 @@ def parse_args(args) -> int:
 def main(args):
     clear()
     mode = get_mode(args)
+    greetings()
 
     if mode == '2-Player':
         p1, p2 = generate_players()
@@ -58,8 +59,6 @@ def main(args):
         print('Cannot start the game.')
         return
 
-    greetings()
-    p1, p2 = generate_players()
     game = TicTacToe(p1, p2)
     game.start()
 
