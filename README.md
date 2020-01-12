@@ -7,10 +7,24 @@ TicTacToe Game made with Python3.
 3. The first player to get a straight line with their own marker, wins.
 4. When all 9 squares are full, with players having no straight line on the grid, ends the game and results in a tie.
 
+## Modes
+ 1 - Human to Human Game Mode
+ 2 - Human to AI Game Mode
+ 3 - AI to AI Game Mode
+
 ## Usage
+### Setup
 ```
 chmod +x play.py
+```
+### Running the game
+Plays Human to Human game mode by default
+```
 ./play
+```
+or
+```
+./play --mode <mode number>
 ```
 
 ## Test
