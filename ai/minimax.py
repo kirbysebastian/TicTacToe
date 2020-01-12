@@ -57,11 +57,8 @@ class Minimax():
                     if g_board.is_space_available(board[row][col]):
                         pos = board[row][col] 
                         board[row][col] = self.char
-                        score = max(best_score, self.calculate(g_board, depth-1, False))
+                        best_score = max(best_score, self.calculate(g_board, depth-1, False))
                         board[row][col] = pos
-
-                        if score > best_score:
-                            best_score = score
 
             return best_score
 
@@ -72,11 +69,8 @@ class Minimax():
                     if g_board.is_space_available(board[row][col]):
                         pos = board[row][col] 
                         board[row][col] = self.x_char
-                        score = min(best_score, self.calculate(g_board, depth-1, True))
+                        best_score = min(best_score, self.calculate(g_board, depth-1, True))
                         board[row][col] = pos
-                        
-                        if score > best_score:
-                            best_score = score
 
             return best_score
 

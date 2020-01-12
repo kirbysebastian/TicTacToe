@@ -34,21 +34,19 @@ class AI(Player):
         g_board = copy.deepcopy(game_board)        
         board = g_board.get_board()
 
-        best_pos = 0
+        best_pos = 5
         best_score = -math.inf
         for row in range(3):
             for col in range(3):
                 if g_board.is_space_available(board[row][col]):
                     pos = board[row][col] 
                     board[row][col] = self.char
-
-                    score = self.algo.calculate(g_board, depth=5, isMaximizingPlayer=False)
+                    score = self.algo.calculate(g_board, depth=4, isMaximizingPlayer=False)
                     board[row][col] = pos # Reset to original position
                     if score > best_score:
                         best_score = score
                         best_pos = pos
 
-                    
         if not g_board.is_space_available(best_pos):
             return None
 
