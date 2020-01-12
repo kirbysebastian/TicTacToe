@@ -9,27 +9,30 @@ class TicTacToe:
        self.board = Board()
 
     def start(self):
-        p1 = self.player_one
-        p1.make_turn(True)
-        p2 = self.player_two
+        self.player_one.make_turn(True)
         board = self.board
         
         while not self.game_over:
             clear()
             print(board)
 
-            if p1.is_turn():
-                msg = "Player-1's turn - {}: ".format(str(p1))
-                board.place(str(p1), self.get_turn_position(msg))
-                p1.make_turn(False)
-                p2.make_turn(True)
-            elif p2.is_turn():
-                msg = "Player-2's turn - {}: ".format(str(p2))
-                board.place(str(p2), self.get_turn_position(msg))
-                p2.make_turn(False)
-                p1.make_turn(True)
-
+            self.next_turn()
             self.check_winner()
+
+    def next_turn(self):
+        p1 = self.player_one
+        p2 = self.player_two
+
+        if p1.is_turn():
+            msg = "Player-1's turn - {}: ".format(str(p1))
+            self.board.place(str(p1), self.get_turn_position(msg))
+            p1.make_turn(False)
+            p2.make_turn(True)
+        elif p2.is_turn():
+            msg = "Player-2's turn - {}: ".format(str(p2))
+            self.board.place(str(p2), self.get_turn_position(msg))
+            p2.make_turn(False)
+            p1.make_turn(True)
 
     def check_winner(self):
         if self.is_player_winner(self.player_one):
