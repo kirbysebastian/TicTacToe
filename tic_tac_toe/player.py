@@ -42,13 +42,12 @@ class AI(Player):
                     pos = board[row][col] 
                     board[row][col] = self.char
 
-                    score = self.algo.calculate(g_board, depth=3, isMaximizingPlayer=False)
+                    score = self.algo.calculate(g_board, depth=5, isMaximizingPlayer=False)
                     board[row][col] = pos # Reset to original position
                     if score > best_score:
                         best_score = score
                         best_pos = pos
 
-#j        return best_pos
                     
         if not g_board.is_space_available(best_pos):
             return None

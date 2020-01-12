@@ -1,6 +1,8 @@
 import copy
 import math
 
+from utils.utilities import is_winner
+
 # STILL TODO
 
 '''
@@ -53,7 +55,6 @@ class Minimax():
             for row in range(3):
                 for col in range(3):
                     if g_board.is_space_available(board[row][col]):
-                        print("ano!", type(board))
                         pos = board[row][col] 
                         board[row][col] = self.char
                         score = max(best_score, self.calculate(g_board, depth-1, False))
@@ -63,12 +64,12 @@ class Minimax():
                             best_score = score
 
             return best_score
+
         else: # MinimizingPlayer
             best_score = math.inf
             for row in range(3):
                 for col in range(3):
                     if g_board.is_space_available(board[row][col]):
-                        print("ano!", type(board))
                         pos = board[row][col] 
                         board[row][col] = self.x_char
                         score = min(best_score, self.calculate(g_board, depth-1, True))
@@ -80,10 +81,16 @@ class Minimax():
             return best_score
 
     def is_terminal(self, game_board):
-        return game_board.is_full()
+        board = game_board.get_board()
+        return game_board.is_full() or is_winner(board, self.char) or is_winner(board, self.x_char)
 
     def get_board_score(self, board):
-        return 1
+        if is_winner(board, self.char):
+            return 1
+        elif is_winner(board, self.x_char):
+            return -1
+        else:
+            return 0
         
 
 

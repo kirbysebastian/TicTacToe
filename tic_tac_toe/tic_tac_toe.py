@@ -13,7 +13,7 @@ class TicTacToe:
         board = self.board
         
         while not self.game_over:
-#            clear()
+            clear()
             print(board)
 
             self.next_turn()
