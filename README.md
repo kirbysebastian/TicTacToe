@@ -71,5 +71,7 @@ function minimax(node, depth, maximizingPlayer) is
 
 - BUG: Make only 1 character input for players
 - Make digit input character for players invalid!
+- Fix Minimax Algo (but is somehow working...)
+- Create a test for minimax.py
 ---
 
