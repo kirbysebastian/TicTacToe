@@ -39,11 +39,11 @@ python3 -m pytest
 
 ## Continuous Integration
 Runs a travis-ci: [Travis-CI](https://travis-ci.org/kirbysebastian/TicTacToe)
----
+
 
 ## AI
 Still todo. Maybe use minimax algorithm (alpha beta pruning)
----
+
 
 ## TODO
 - ~~Fix bug when players have the same character~~
