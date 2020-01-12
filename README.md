@@ -40,9 +40,9 @@ Runs a travis-ci: [Travis-CI](https://travis-ci.org/kirbysebastian/TicTacToe)
 Still todo. Maybe use minimax algorithm (alpha beta pruning)
 
 ## TODO
-~~- Fix bug when players have the same character~~
-~~- Add text/labels for player turn to identify current player's turn~~
-~~- Rename modules with lowercase and fix imports~~
+-~~Fix bug when players have the same character~~
+-~~Add text/labels for player turn to identify current player's turn~~
+-~~Rename modules with lowercase and fix imports~~
 
 - BUG: Make only 1 character input for players
 
