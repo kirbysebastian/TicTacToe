@@ -12,7 +12,7 @@ TicTacToe Game made with Python3.
  * (2) - Human to AI Game Mode  ***// Not yet supported***
  * (3) - AI to AI Game Mode  ***// Not yet supported***
 
-## Usage
+## Game Usage
 ### Setup
 ```
 chmod +x play.py
@@ -27,7 +27,7 @@ or
 ./play --mode <mode number>
 ```
 
-## Test
+## Running Tests
 Runs with pytest
 ```
 python3 -m pytest
@@ -39,7 +39,10 @@ Runs a travis-ci: [Travis-CI](https://travis-ci.org/kirbysebastian/TicTacToe)
 ## AI
 Still todo. Maybe use minimax algorithm (alpha beta pruning)
 
-## TODOs
-- *add some todo lists here...* 
+## TODO
+~~- Fix bug when players have the same character~~
+~~- Add text/labels for player turn to identify current player's turn~~
+~~- Rename modules with lowercase and fix imports~~
+
 - BUG: Make only 1 character input for players
 
