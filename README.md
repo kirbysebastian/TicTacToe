@@ -10,7 +10,7 @@ TicTacToe Game made with Python3.
 ## Modes
  * (1) - Human to Human Game Mode
  * (2) - Human to AI Game Mode  ***// Not yet supported***
- * (3) - AI to AI Game Mode  ***// Not yet supported ***
+ * (3) - AI to AI Game Mode  ***// Not yet supported***
 
 ## Usage
 ### Setup
