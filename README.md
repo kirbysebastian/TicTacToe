@@ -25,3 +25,6 @@ Runs a travis-ci: [Travis-CI](https://travis-ci.org/kirbysebastian/TicTacToe)
 ## TODOs
 - *add some todo lists here...* 
 - Make only 1 character input for players
+
+## AI
+Still todo. Maybe use minimax algorithm.`
