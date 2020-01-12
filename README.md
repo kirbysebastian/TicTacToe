@@ -27,5 +27,5 @@ Still todo. Maybe use minimax algorithm (alpha beta pruning)
 
 ## TODOs
 - *add some todo lists here...* 
-- Make only 1 character input for players
+- BUG: Make only 1 character input for players
 
