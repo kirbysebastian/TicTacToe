@@ -43,7 +43,7 @@ python3 -m pytest
 Runs a travis-ci: [Travis-CI](https://travis-ci.org/kirbysebastian/TicTacToe)
 
 
-## Artificial Intelligence Algorithm
+## Artificial Intelligence
 Still todo. Maybe use minimax algorithm (alpha beta pruning)
 ### Pseudocode
 Based on [Minimax Algorithm](https://en.wikipedia.org/wiki/Minimax#Pseudocode)
