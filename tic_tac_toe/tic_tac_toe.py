@@ -1,11 +1,12 @@
 from tic_tac_toe.board import Board
-from utils.clear import clear
+from utils.utilities import clear, is_winner
 
 class TicTacToe:
     def __init__(self, player1, player2):
        self.game_over = False
        self.player_one = player1
        self.player_two = player2
+       print(type(player2))
        self.board = Board()
 
     def start(self):
@@ -24,13 +25,19 @@ class TicTacToe:
         p2 = self.player_two
 
         if p1.is_turn():
-            msg = "Player-1's turn - {}: ".format(str(p1))
-            self.board.place(str(p1), p1.get_turn_position(self.board, msg))
+            pos = p1.get_turn_position(self.board)
+            if pos == None:
+                return
+
+            self.board.place(str(p1), pos)
             p1.make_turn(False)
             p2.make_turn(True)
         elif p2.is_turn():
-            msg = "Player-2's turn - {}: ".format(str(p2))
-            self.board.place(str(p2), p2.get_turn_position(self.board, msg))
+            pos = p2.get_turn_position(self.board)
+            if pos == None:
+                return
+
+            self.board.place(str(p2), pos)
             p2.make_turn(False)
             p1.make_turn(True)
 
@@ -51,26 +58,8 @@ class TicTacToe:
     def is_player_winner(self, player: str):
         p_char = str(player)
         m_board = self.board.get_board()
-        diag_check = (p_char == m_board[0][0] ==
-            m_board[1][1] == m_board[2][2]) or (
-            p_char == m_board[0][2] ==
-            m_board[1][1] == m_board[2][0])
         
-        ver_check = (p_char == m_board[0][0] ==
-            m_board[1][0] == m_board[2][0]) or (
-            p_char == m_board[0][1] ==
-            m_board[1][1] == m_board[2][1]) or (
-            p_char == m_board[0][2] ==
-            m_board[1][2] == m_board[2][2])
-
-        horz_check = (p_char == m_board[0][0] ==
-            m_board[0][1] == m_board[0][2]) or (
-            p_char == m_board[1][0] ==
-            m_board[1][1] == m_board[1][2]) or (
-            p_char == m_board[2][0] ==
-            m_board[2][1] == m_board[2][2]) 
-
-        return diag_check or ver_check or horz_check 
+        return is_winner(m_board, p_char)
 
     def announce_winner(self, player):
         clear()

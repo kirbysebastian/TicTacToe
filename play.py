@@ -4,7 +4,7 @@ import sys
 
 from tic_tac_toe.player import Player, AI
 from tic_tac_toe.tic_tac_toe import TicTacToe
-from utils.clear import clear
+from utils.utilities import clear
 
 def generate_players(is_p1_ai=False, is_p2_ai=False):
     p1_char = input('Enter Player 1 Character: ')
@@ -18,12 +18,12 @@ def generate_players(is_p1_ai=False, is_p2_ai=False):
         break
 
     if is_p1_ai == True:
-        player1 = AI(p1_char)
+        player1 = AI(p1_char, p2_char)
     else:
         player1 = Player(p1_char)
 
     if is_p2_ai == True:
-        player2 = AI(p2_char)
+        player2 = AI(p2_char, p1_char)
     else:
         player2 = Player(p2_char)
 

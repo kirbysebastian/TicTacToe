@@ -1,3 +1,6 @@
+import copy
+import math
+
 # STILL TODO
 
 '''
@@ -25,12 +28,61 @@ Board Position Representation
 #
 #
 #
+score = {
+
+	}
 
 # GOAL: Returns the best position available in board
 class Minimax():
-	def __init__(self):
-		pass
+	def __init__(self, player_char, opp_char):
+		self.char = player_char
+		self.x_char = opp_char
 	
 	def check_board_state(self):
 		pass
+	
+	def calculate(self, game_board, depth, isMaximizingPlayer) -> tuple:
+		g_board = copy.deepcopy(game_board)
+		board = g_board.get_board()
+
+		if depth == 0 or is_terminal(g_board):
+			return get_board_score(board)
+
+		if isMaximizingPlayer is True:
+			best_score = -math.inf
+			for row in range(3):
+				for col in range(3):
+					if g_board.is_space_available(board[row][col]):
+#						pos = board[row][col] 
+#						board[row][col] = self.char
+#						score = max(val, self.calculate(g_board, depth-1, False)
+#                    	board[row][col] = pos
+
+						if score > best_score:
+							best_score = score
+
+			return best_score
+		else: # MinimizingPlayer
+			best_score = math.inf
+			for row in range(3):
+				for col in range(3):
+					if g_board.is_space_available(board[row][col]):
+#						pos = board[row][col] 
+#						board[row][col] = self.x_char
+#						score = min(val, self.calculate(g_board, depth-1, True)
+#						board[row][col] = pos
+						
+						if score > best_score:
+							best_score = score
+
+			return best_score
+
+	def is_terminal(self, game_board):
+		pass
+
+	def get_board_score(self, board):
+		return 1
+		
+
+
 
