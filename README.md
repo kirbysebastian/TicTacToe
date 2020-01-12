@@ -27,4 +27,4 @@ Runs a travis-ci: [Travis-CI](https://travis-ci.org/kirbysebastian/TicTacToe)
 - Make only 1 character input for players
 
 ## AI
-Still todo. Maybe use minimax algorithm.`
+Still todo. Maybe use minimax algorithm (alpha beta pruning)
