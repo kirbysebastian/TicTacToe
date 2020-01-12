@@ -22,3 +22,11 @@ class Player:
                 continue
             break
         return pos
+
+class AI(Player):
+    def __init__(self, p_char):
+        super().__init__(p_char)
+
+    # Override get_turn_position function here...
+    def foo(self):
+        pass
