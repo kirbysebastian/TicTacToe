@@ -46,6 +46,7 @@ Runs a travis-ci: [Travis-CI](https://travis-ci.org/kirbysebastian/TicTacToe)
 ## AI
 Still todo. Maybe use minimax algorithm (alpha beta pruning)
 ### Pseudocode
+Based on [Wiki](https://en.wikipedia.org/wiki/Minimax#Pseudocode)
 ```
 function minimax(node, depth, maximizingPlayer) is
     if depth = 0 or node is a terminal node then
