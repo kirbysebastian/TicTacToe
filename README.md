@@ -90,5 +90,6 @@ The most optimal value of depth for this game is 5 before the AI have the most s
 
 - Create a test for minimax.py
 - Nice to have: Create a GUI
+- Try implementing alpha beta pruning and increase depth
 ---
 
