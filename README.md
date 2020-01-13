@@ -77,7 +77,7 @@ function minimax(node, depth, maximizingPlayer) is
         return value
 ```
 ### Notes:
-The most optimal value of depth for this game would be 5 before the AI have the most sensible move. Beat it if you can! :D
+The most optimal value of depth for this game is 5 before the AI have the most sensible move. Dare: Beat it if you can! :D
 
 ## TODOs
 - ~~Fix bug when players have the same character~~
@@ -85,9 +85,9 @@ The most optimal value of depth for this game would be 5 before the AI have the 
 - ~~Rename modules with lowercase and fix imports~~
 - ~~BUG: Make only 1 character input for players~~
 - ~~Make digit input character for players invalid!~~
+- ~~Fix Minimax Algo (but is somehow working...)~~
+- ~~Nice to have: Setting of AI difficulty. :)~~
 
-- Fix Minimax Algo (but is somehow working...)
 - Create a test for minimax.py
-- Nice to have: Setting of AI difficulty. :)
 ---
 
