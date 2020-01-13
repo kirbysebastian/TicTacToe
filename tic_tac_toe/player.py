@@ -1,6 +1,6 @@
 import copy
 import math
-from ai.minimax import Minimax
+from ai.algorithms import Minimax
 
 class Player:
     def __init__(self, p_char):
