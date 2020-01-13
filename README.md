@@ -49,7 +49,13 @@ python3 -m pytest
 Runs a travis-ci: [Travis-CI](https://travis-ci.org/kirbysebastian/TicTacToe)
 
 ## Artificial Intelligence
-Minimax algorithm was used.
+[Minimax algorithm](https://en.wikipedia.org/wiki/Minimax) was used.
+```
+Scores: -1, 0, 1
+```
+
+Maximizing player gets the score of 1 while minimizing player gets the score of 2. If in case a tie, score will be 0.
+For more information of how this algorithm work: [Game Theory](https://en.wikipedia.org/wiki/Minimax#Combinatorial_game_theory)
 
 ### Pseudocode
 Based on [Minimax Algorithm](https://en.wikipedia.org/wiki/Minimax#Pseudocode)
@@ -69,10 +75,9 @@ function minimax(node, depth, maximizingPlayer) is
         return value
 ```
 ### Notes:
-Most optimum
+The most optimal value of depth for this game would be 5 before the AI have the most sensible move. Beat it if you can! :D
 
-
-## TODO
+## TODOs
 - ~~Fix bug when players have the same character~~
 - ~~Add text/labels for player turn to identify current player's turn~~
 - ~~Rename modules with lowercase and fix imports~~

@@ -3,8 +3,6 @@ import math
 
 from utils.utilities import is_winner
 
-# STILL TODO
-
 '''
 Board Position Representation
  1 | 2 | 3

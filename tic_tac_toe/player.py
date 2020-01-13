@@ -34,7 +34,7 @@ class AI(Player):
         g_board = copy.deepcopy(game_board)        
         board = g_board.get_board()
 
-        best_pos = 5
+        best_pos = 0
         best_score = -math.inf
         for row in range(3):
             for col in range(3):
