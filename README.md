@@ -26,6 +26,7 @@ Plays Human to Human game mode by default
 ```
 // For Linux
 ./play
+
 // For Windows
 python3 play.py
 ```
@@ -33,6 +34,7 @@ or
 ```
 // For Linux
 ./play --mode <mode number>
+
 // For Windows
 python3 play.py --mode <mode numer>
 ```
@@ -55,7 +57,7 @@ Scores: -1, 0, 1
 ```
 
 Maximizing player gets the score of 1 while minimizing player gets the score of 2. If in case a tie, score will be 0.
-For more information of how this algorithm work: [Game Theory](https://en.wikipedia.org/wiki/Minimax#Combinatorial_game_theory)
+For more information of how this algorithm works: [Game Theory](https://en.wikipedia.org/wiki/Minimax#Combinatorial_game_theory)
 
 ### Pseudocode
 Based on [Minimax Algorithm](https://en.wikipedia.org/wiki/Minimax#Pseudocode)
