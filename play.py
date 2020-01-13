@@ -6,16 +6,35 @@ from tic_tac_toe.player import Player, AI
 from tic_tac_toe.tic_tac_toe import TicTacToe
 from utils.utilities import clear
 
-def generate_players(is_p1_ai=False, is_p2_ai=False):
-    p1_char = input('Enter Player 1 Character: ')
+def get_validated_inputs():
+    areValidInputs = False
+    is_p1_valid = False
+    is_p2_valid = False
+    while not areValidInputs:
+        if not is_p1_valid:
+            p1_char = input('Enter Player 1 Character: ')
 
-    while True:
+        if (not is_p1_valid) and ( (len(p1_char) > 1) or (p1_char.isnumeric()) ):
+            print('Please enter valid character.')
+            continue
+
+        is_p1_valid = True
+
         p2_char = input('Enter Player 2 Character: ')
-        if p2_char == p1_char:
-            print('Player 2 charater is same with Player 1. Please change...')
+        if len(p2_char) > 1 or (p2_char.isnumeric()):
+            print('Please enter valid character.')
+            continue
+        elif p2_char == p1_char:
+            print('Chosen character is same with Player 1. Try again.')
             continue
 
         break
+
+    return p1_char, p2_char
+
+def generate_players(is_p1_ai=False, is_p2_ai=False):
+
+    p1_char, p2_char = get_validated_inputs()
 
     if is_p1_ai == True:
         player1 = AI(p1_char, p2_char)

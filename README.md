@@ -12,8 +12,8 @@ A terminal TicTacToe game made with Python3.
 
 ## Modes
  * (1) - Human to Human Game Mode
- * (2) - Human to AI Game Mode  ***// Not yet supported***
- * (3) - AI to AI Game Mode  ***// Not yet supported***
+ * (2) - Human to AI Game Mode  
+ * (3) - AI to AI Game Mode
 ---
 
 ## Game Usage
@@ -24,11 +24,17 @@ chmod +x play.py
 ### Running the game
 Plays Human to Human game mode by default
 ```
+// For Linux
 ./play
+// For Windows
+python3 play.py
 ```
 or
 ```
+// For Linux
 ./play --mode <mode number>
+// For Windows
+python3 play.py --mode <mode numer>
 ```
 ---
 
@@ -42,9 +48,9 @@ python3 -m pytest
 ## Continuous Integration
 Runs a travis-ci: [Travis-CI](https://travis-ci.org/kirbysebastian/TicTacToe)
 
-
 ## Artificial Intelligence
-Still todo. Maybe use minimax algorithm (alpha beta pruning)
+Minimax algorithm was used.
+
 ### Pseudocode
 Based on [Minimax Algorithm](https://en.wikipedia.org/wiki/Minimax#Pseudocode)
 ```
@@ -62,16 +68,19 @@ function minimax(node, depth, maximizingPlayer) is
             value := min(value, minimax(child, depth − 1, TRUE))
         return value
 ```
+### Notes:
+Most optimum
 
 
 ## TODO
 - ~~Fix bug when players have the same character~~
 - ~~Add text/labels for player turn to identify current player's turn~~
 - ~~Rename modules with lowercase and fix imports~~
+- ~~BUG: Make only 1 character input for players~~
+- ~~Make digit input character for players invalid!~~
 
-- BUG: Make only 1 character input for players
-- Make digit input character for players invalid!
 - Fix Minimax Algo (but is somehow working...)
 - Create a test for minimax.py
+- Nice to have: Setting of AI difficulty. :)
 ---
 
