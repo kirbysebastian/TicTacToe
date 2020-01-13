@@ -89,5 +89,6 @@ The most optimal value of depth for this game is 5 before the AI have the most s
 - ~~Nice to have: Setting of AI difficulty. :)~~
 
 - Create a test for minimax.py
+- Nice to have: Create a GUI
 ---
 
