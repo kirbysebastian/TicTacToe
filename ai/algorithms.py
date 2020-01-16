@@ -11,16 +11,13 @@ Board Position Representation
 ---+---+---
  7 | 8 | 9
 '''
-# GOAL: Returns the best position available in board
+
 class Minimax():
     def __init__(self, player_char, opp_char):
         self.char = player_char
         self.x_char = opp_char
     
-    def check_board_state(self):
-        pass
-    
-    def calculate(self, game_board, depth, isMaximizingPlayer) -> tuple:
+    def calculate(self, game_board, depth, isMaximizingPlayer):
         g_board = copy.deepcopy(game_board)
         board = g_board.get_board()
 
