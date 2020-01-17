@@ -19,6 +19,7 @@ A terminal TicTacToe game made with Python3.
 ## Game Usage
 ### Setup
 ```
+// For Linux only
 chmod +x play.py
 ```
 ### Running the game
