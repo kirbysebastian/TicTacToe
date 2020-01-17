@@ -11,7 +11,6 @@ Board Position Representation
 ---+---+---
  7 | 8 | 9
 '''
-
 class Minimax():
     def __init__(self, player_char, opp_char):
         self.char = player_char

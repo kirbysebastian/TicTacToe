@@ -3,6 +3,11 @@ import pytest
 from ai.algorithms import Minimax
 from tic_tac_toe.board import Board
 
+# SCORES
+TIE = 0
+MAX  = 1
+MIN  = -1
+
 '''
 Board Position Representation
 Player-X's turn
@@ -12,24 +17,6 @@ Player-X's turn
 ---+---+---
  X |   |  
 '''
-board_position = [
-	['O', 'O', '3'],
-	['X', 'X', 'O'],
-	['X', '8', '9']
-]
-
-TIE = 0
-P1  = 1
-P2  = -1
-
-#def create_board(board_list):
-#	board = Board()
-#	for rows in board_positon:
-#		for ch in rows:
-#			board.place(ch, i+1)		
-#			board.place(rows[i+1], i+1)		
-#			board.place(rows[i+2], i+1)		
-	
 def create_board(board_list):
 	board = Board()
 	board.place('O', '1')
@@ -40,11 +27,19 @@ def create_board(board_list):
 	board.place('X', '7')
 	return board
 	
-
-def test_minimax():
+def test_maximizing_score_and_isterminal():
 	board = create_board([])	
 	algo = Minimax('X', 'O')
 	assert TIE == algo.get_board_score(board.get_board())
 	assert True == board.place('X', '3')
-	assert P1 == algo.get_board_score(board.get_board())
+	assert MAX == algo.get_board_score(board.get_board())
+	assert True == algo.is_terminal(board)
 
+def test_minimizing_score_and_isterminal():
+	board = create_board([])	
+	algo = Minimax('X', 'O')
+	assert TIE == algo.get_board_score(board.get_board())
+	assert True == board.place('O', '3')
+	assert MIN == algo.get_board_score(board.get_board())
+	assert True == algo.is_terminal(board)
+	
