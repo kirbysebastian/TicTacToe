@@ -16,5 +16,3 @@ def test_ttt_is_player_winner():
     assert game.is_player_winner(p1) == False
     assert game.is_player_winner(p2) == False
 
-def test_test_test():
-    assert 1 == 2
