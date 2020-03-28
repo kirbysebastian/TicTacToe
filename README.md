@@ -1,5 +1,5 @@
 # TicTacToe [![Build Status](https://api.travis-ci.org/kirbysebastian/TicTacToe.svg)](https://travis-ci.org/kirbysebastian/TicTacToe)
-![](https://raw.githubusercontent.com/kirbysebastian/TicTacToe/master/tictactoe_game.png)
+![](https://raw.githubusercontent.com/kirbysebastian/TicTacToe/master/img/tictactoe_game.png)
 
 A terminal TicTacToe game made with Python3.
 
