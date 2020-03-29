@@ -1,5 +1,6 @@
 from tic_tac_toe.board import Board
 from utils.utilities import clear, is_winner
+from gui.gui import GUI as gui
 
 class TicTacToe:
     def __init__(self, player1, player2):
@@ -7,17 +8,16 @@ class TicTacToe:
        self.player_one = player1
        self.player_two = player2
        self.board = Board()
+       self.gui = gui()
 
     def start(self):
-        self.player_one.make_turn(True)
-        board = self.board
+        #self.player_one.make_turn(True)
+        #board = self.board
         
+        gui = self.gui
         while not self.game_over:
-            clear()
-            print(board)
+            gui.start()
 
-            self.next_turn()
-            self.check_winner()
 
     def next_turn(self):
         p1 = self.player_one

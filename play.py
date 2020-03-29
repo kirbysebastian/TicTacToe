@@ -34,7 +34,7 @@ def get_validated_inputs():
 
 def generate_players(is_p1_ai=False, is_p2_ai=False):
 
-    p1_char, p2_char = get_validated_inputs()
+    #p1_char, p2_char = get_validated_inputs()
 
     if is_p1_ai == True:
         player1 = AI(p1_char, p2_char)
