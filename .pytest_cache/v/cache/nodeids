@@ -1,0 +1,16 @@
+[
+  "test/test_board.py::test_board_place_with_integer_pos",
+  "test/test_board.py::test_board_place_with_invalid_pos",
+  "test/test_board.py::test_board_place",
+  "test/test_board.py::test_board_is_full",
+  "test/test_board.py::test_board_is_not_full",
+  "test/test_board.py::test_board_place_correct_position",
+  "test/test_board.py::test_board_place_incorrect_position",
+  "test/test_board.py::test_board_is_space_available",
+  "test/test_minimax.py::test_maximizing_score_and_isterminal",
+  "test/test_minimax.py::test_minimizing_score_and_isterminal",
+  "test/test_player.py::test_player_character",
+  "test/test_player.py::test_player_turn",
+  "test/test_tic_tac_toe.py::test_ttt_is_game_over",
+  "test/test_tic_tac_toe.py::test_ttt_is_player_winner"
+]

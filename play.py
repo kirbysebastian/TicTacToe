@@ -1,10 +1,11 @@
-#!/usr/bin/python3.7
+#!/usr/bin/python3
 
 import sys
 
 from tic_tac_toe.player import Player, AI
 from tic_tac_toe.tic_tac_toe import TicTacToe
 from utils.utilities import clear
+
 
 def get_validated_inputs():
     areValidInputs = False
@@ -14,7 +15,7 @@ def get_validated_inputs():
         if not is_p1_valid:
             p1_char = input('Enter Player 1 Character: ')
 
-        if (not is_p1_valid) and ( (len(p1_char) > 1) or (p1_char.isnumeric()) ):
+        if (not is_p1_valid) and ((len(p1_char) > 1) or (p1_char.isnumeric())):
             print('Please enter valid character.')
             continue
 
@@ -32,6 +33,7 @@ def get_validated_inputs():
 
     return p1_char, p2_char
 
+
 def generate_players(is_p1_ai=False, is_p2_ai=False):
 
     p1_char, p2_char = get_validated_inputs()
@@ -48,15 +50,14 @@ def generate_players(is_p1_ai=False, is_p2_ai=False):
 
     return player1, player2
 
+
 def greetings():
     print('WELCOME TO MY VERY OWN PYTHON-TICTACTOE GAME!\n')
 
-modes = {
-    0: 'NULL',
-    1: '2-Player',
-    2: 'AI',
-    3: 'AIvsAI'
-    }
+
+modes = {0: 'NULL', 1: '2-Player', 2: 'AI', 3: 'AIvsAI'}
+
+
 def get_mode(args):
     mode = parse_args(args)
     if mode not in modes.keys() or mode == 0:
@@ -65,11 +66,13 @@ def get_mode(args):
 
     return modes[mode]
 
+
 def parse_args(args) -> int:
     if '--mode' not in args:
         return 1
 
     return int(args[args.index('--mode') + 1])
+
 
 def main(args):
     clear()
@@ -89,6 +92,6 @@ def main(args):
     game = TicTacToe(p1, p2)
     game.start()
 
+
 if __name__ == '__main__':
     main(sys.argv)
-
