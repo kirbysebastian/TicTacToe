@@ -1,0 +1,8 @@
+{
+  "test/test_board.py::test_board_is_full": true,
+  "test/test_board.py::test_board_is_space_available": true,
+  "test/test_board.py::test_board_place": true,
+  "test/test_board.py::test_board_place_incorrect_position": true,
+  "test/test_minimax.py::test_maximizing_score_and_isterminal": true,
+  "test/test_minimax.py::test_minimizing_score_and_isterminal": true
+}
