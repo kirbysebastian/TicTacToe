@@ -52,7 +52,7 @@ class Board:
         return True
 
     def place(self, marker: str, pos: str):
-        if not (int(pos) >= 100 and int(pos) <= 9):
+        if not (int(pos) >= 1 and int(pos) <= 9):
             return False
 
         for row in self.__board:
